@@ -1,0 +1,37 @@
+{
+    "template": "logstash",
+    "index_patterns": [
+        "logstash-*"
+    ],
+    "settings": {
+        "number_of_shards": 1
+    },
+    "mappings": {
+        "properties": {
+            "name": {
+                "type": "keyword"
+            },
+            "logger_name": {
+                "type": "keyword"
+            },
+            "thread_name": {
+                "type": "keyword"
+            },
+            "stack_trace": {
+                "type": "text"
+            },	
+            "message": {
+                "type": "text"
+            },	
+            "level": {
+                "type": "keyword"
+            },	
+            "level_value": {
+                "type": "integer"
+            },				
+            "@timestamp": {
+                "type": "date"
+            }
+        }
+    }
+}
